@@ -1,0 +1,293 @@
+
+local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
+local window = DrRayLibrary:Load("NORO HUB | FREE!", 16073647407)
+
+
+local food = "CannedFood"
+local y = "food"
+
+local tab = DrRayLibrary.newTab("CREDS💳", "ImageIdHere")
+
+tab.newButton("🤔 IS THIS A FREE SCRIPT:", "Yes from viply111scripts", function()	
+print("yes")
+end) 
+
+tab.newButton("This script was made in 2024 Jul 12 and was released in Jul 16/17. ⏰", "Sub to viply111scripts, Also this isn't a epic.gg copy, The original script was made wayyy before that shitty epic.gg ever existed.", function()	
+print("yes")
+end) 
+
+local tab = DrRayLibrary.newTab("SPAWNER🤑", "ImageIdHere")
+
+tab.newButton("HOW TO USE:", "First type the item you want to spawn then type the number then it should spawn right after you type the number", function()	
+print("yes")
+end) 
+
+getgenv().equip = false
+getgenv().item = nil
+getgenv().num = 0
+
+function equip()
+        if getgenv().equip then
+local args = {
+    [1] = "Pay Virus Requested Amount",
+    [2] = getgenv().item,
+    [3] = -getgenv().num
+}
+
+game:GetService("ReplicatedStorage").Events.StartVote:FireServer(unpack(args))
+wait(0.1)
+        end
+    end
+
+tab.newInput("Input the item name here", "Then input the number on the next input", function(value)
+if value == "food" then
+getgenv().item = "CannedFood"
+
+elseif value == "water" then
+getgenv().item = "Water"
+
+elseif value == "med" then
+getgenv().item = "Medkit"
+
+elseif value == "soap" then
+getgenv().item = "Soap"
+
+elseif value == "tape" then
+getgenv().item = "DuctTape"
+
+elseif value == "flash" then
+getgenv().item = "Flashlight"
+
+elseif value == "br" then
+getgenv().item = "Battery"
+
+elseif value == "box" then
+getgenv().item = "Toolbox"
+
+elseif value == "backpack" then
+getgenv().item = "Backpack"
+
+elseif value == "mask" then
+getgenv().item = "GasMask"
+
+elseif value == "map" then
+getgenv().item = "Map"
+
+elseif value == "bug" then
+getgenv().item = "BugSpray"
+
+elseif value == "rat" then
+getgenv().item = "RatTrap"
+
+elseif value == "radio" then
+getgenv().item = "Radio"
+
+else
+    getgenv().item = value
+end
+end)
+
+tab.newButton("Proceed after you inputted the item name", "Type how much you want or add negatives, Just don't add thousands or it will bug and stop working", function()	
+print("yes")
+end) 
+
+tab.newInput("Input the amount of item you want here", "Put it after you already put the item name input", function(value)
+    getgenv().num = value
+wait(0.1)
+getgenv().equip = true
+equip()
+wait(0.01)
+getgenv.equip = false
+end)
+
+local tab = DrRayLibrary.newTab("WORDS📖", "ImageIdHere")
+tab.newButton("This is shortcuts for item names", "Only for item spawner tab", function()	
+print("yes")
+end) 
+
+tab.newButton("CannedFood Shortcut: food", "", function()	
+print("yes")
+end) 
+
+tab.newButton("Water Shortcut: water", "", function()	
+print("yes")
+end) 
+
+tab.newButton("Medkit Shortcut: med", "", function()	
+print("yes")
+end) 
+
+tab.newButton("Soap Shortcut: soap", "", function()	
+print("yes")
+end) 
+
+tab.newButton("DuctTape Shortcut: tape", "", function()	
+print("yes")
+end) 
+
+tab.newButton("Flashlight Shortcut: flash", "", function()	
+print("yes")
+end) 
+
+tab.newButton("Battery Shortcut: br", "", function()	
+print("yes")
+end) 
+
+tab.newButton("Toolbox Shortcut: box", "", function()	
+print("yes")
+end) 
+
+tab.newButton("Backpack Shortcut: backpack", "", function()	
+print("yes")
+end) 
+
+tab.newButton("GasMask Shortcut: mask", "", function()	
+print("yes")
+end) 
+
+tab.newButton("Map Shortcut: map", "", function()	
+print("yes")
+end) 
+
+tab.newButton("BugSpray Shortcut: bug", "", function()	
+print("yes")
+end) 
+
+tab.newButton("RatTrap Shortcut: rat", "", function()	
+print("yes")
+end) 
+
+tab.newButton("Radio Shortcut: radio", "", function()	
+print("yes")
+end)
+
+tab.newButton("Unfortunately those are the only shortcuts", "You can read the wiki for item names/ weapon names", function()	
+print("yes")
+end) 
+
+local tab = DrRayLibrary.newTab("OP💀", "ImageIdHere")
+
+tab.newButton("LAG SERVER 💀", "Spam for bigger lag", function()	
+for i = 1, 100000 do
+game:GetService("ReplicatedStorage").Events.BoughtProductFromMarket:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.BasementItemGUIs.Computer.Background.Market.ProductIDs.CannedFood)
+end
+end)
+
+tab.newButton("DAYS AUTOFARM [SINGLEPLAYER ONLY] [CANT TURN OFF]", "Copied from epic.gg paid autofarm lol", function()	
+while wait(0.1) do
+game:GetService("ReplicatedStorage").Events.SleepVote:FireServer()
+local args = {
+    [1] = -1000000,
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage").Events.ChangingPlayerHealth:FireServer(unpack(args))
+game:GetService("ReplicatedStorage").Events.Respawn:FireServer()
+end
+end)
+
+tab.newButton("HOW TO USE:", "Input any lobby name and you will unlock it", function()	
+print("yes")
+end) 
+
+getgenv().namelob = false
+getgenv().lobby = nil
+
+function lobequip()
+        while getgenv().namelob do 
+          
+local args = {
+    [1] = 0,
+    [2] = getgenv().lobby
+}
+
+game:GetService("ReplicatedStorage").BuyTheme:InvokeServer(unpack(args))
+            wait(0.1)
+        end
+    end
+
+tab.newInput("Input the name you want the lobby to be here", "After you finish typing it you will get the lobby", function(value)
+    getgenv().lobby = value
+wait(0.1)
+getgenv().namelob = true
+lobequip()
+wait(0.1)
+getgenv.namelob = false
+end)
+
+tab.newButton("STATS GO SLOWER LIKE HUNGER AND THIRST [FOR EVERYONE] [NOT HEALTH]", "Only press once", function()	
+for i = 1, 1000 do
+game:GetService("ReplicatedStorage").Events.BoughtProductFromMarket:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.BasementItemGUIs.Computer.Background.Market.ProductIDs.LoweringStats)
+end
+end)
+
+tab.newButton("FREE REVIVE 💀 [MULTIPLAYER ONLY] [READ INSTRUCTIONS FIRST]", "How to use: First when you die, Press spectate then press this button then load infinite yield and type view me", function()	
+game:GetService("ReplicatedStorage").Events.Respawn:FireServer()
+end)
+
+local tab = DrRayLibrary.newTab("GENERIC🙂", "ImageIdHere")
+
+tab.newToggle("UNSTABLE GOD MODE", "Reason why its unstable: Cant survive one hit stuff", false, function(rel)
+    while rel do
+local args = {
+    [1] = -1000000,
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage").Events.ChangingPlayerHealth:FireServer(unpack(args))
+wait(0.1)
+    end
+end)
+
+tab.newButton("Remove black screen", "Use if you get a black screen at the start of the game", function()	
+local yes = game:GetService("Players").LocalPlayer.PlayerGui.IntroCutscene
+yes.Enabled = false
+end)
+
+tab.newToggle("AUTO GENERATOR FIX", "I dont need to explain", false, function(rell)
+    while rell do
+game:GetService("ReplicatedStorage").Events.ChangingGeneratorHealth:FireServer()
+wait(0.1)
+    end
+end)
+
+tab.newToggle("AUTO CHARGE VAULT SECURITY", "I dont need to explain", false, function(relll)
+    while relll do
+game:GetService("ReplicatedStorage").Events.SecurityCamera.ChangingHealth:FireServer()
+wait(0.1)
+    end
+end)
+
+tab.newDropdown("Item Spawner Lite", "More convenient for short spawns", {"CannedFood", "Water", "Medkit", "Soap", "DuctTape", "BugSpray", "RatTrap", "Toolbox"}, function(Option)
+    getgenv().lite = Option
+game:GetService("ReplicatedStorage").Events.BoughtProductFromMarket:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.BasementItemGUIs.Computer.Background.Market.ProductIDs[getgenv().lite])
+end)
+
+tab.newButton("Nothing", "Useful", function()	
+print("no")
+end)
+
+tab.newToggle("AUTO TOILET FIX", "I dont need to explain", false, function(relll)
+    while relll do
+game:GetService("ReplicatedStorage").Events.CleanedToilet:FireServer()
+    end
+end)
+
+while true do  -- Infinite loop
+    wait(0.1)  -- Adjust delay as needed
+    local coreGui = game:GetService("CoreGui")
+local args = {
+    [1] = game:GetService("Players").LocalPlayer,
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage").Events.ActiveVoteCounting:FireServer(unpack(args))
+    -- Check if each GUI exists before destroying
+    if coreGui:FindFirstChild("SimpleSpy2") then
+        coreGui.SimpleSpy2:Destroy()
+    end
+    
+    if coreGui:FindFirstChild("TurtleSpyGUI") then
+        coreGui.TurtleSpyGUI:Destroy()
+    end
+end
