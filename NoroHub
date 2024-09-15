@@ -1,18 +1,1 @@
-local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
-local window = DrRayLibrary:Load("NORO HUB | FREE!", 16073647407)
-
-local tab = DrRayLibrary.newTab("CREDS💳", "ImageIdHere")
-
-tab.newButton("🤔 IS THIS A FREE SCRIPT:", "Yes from viply111scripts", function()	
-print("yes")
-end) 
-
-tab.newButton("This script was made in 2024 Sep 15. ⏰", "Sub to viply111scripts, This script is also made for only wave defense overdrive.", function()	
-print("yes")
-end) 
-
-local tab = DrRayLibrary.newTab("Main", "ImageIdHere")
-
-tab.newButton("God Mode", "Rejoin after doing 1 round with god mode on using infinite yield / Rejoin after teleporting to lobby (It's because your attacks stop working)", function()	
-game:GetService("ReplicatedStorage").WDOReplicatedStorage.Events.enemyDamage:Destroy()
-end)
+h
