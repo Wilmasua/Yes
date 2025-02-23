@@ -1,0 +1,60 @@
+local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
+local window = DrRayLibrary:Load("Slap battles boxer autofarm", 16073647407)
+
+local tab = DrRayLibrary.newTab("MAIN", "ImageIdHere")
+
+
+tab.newLabel("HOW TO USE: Click get boxer glove if you don't have it but if you got it press start autofarm")
+
+tab.newLabel("NOTE: Press Get boxer glove again after being teleported to the subplace")
+
+tab.newButton("Get boxer glove", "Press this if you don't have it", function()
+if game.PlaceId == 7234087065 then
+		firetouchinterest(game:GetService("Workspace").Buildings.house.TP, game.Players.LocalPlayer.Character.Torso, 1)
+		firetouchinterest(game:GetService("Workspace").Buildings.house.TP, game.Players.LocalPlayer.Character.Torso, 0)
+		wait(2)
+		fireclickdetector(workspace.BoxingGloves.ClickDetector)
+return
+end
+
+local function swait()
+	game:GetService("RunService").Stepped:wait()
+end
+local Lobby, GlovesStand, RegularPortal = loadstring(game:HttpGet(('https://raw.githubusercontent.com/DonjoScripts/General-SB-/refs/heads/SlapBattles/SlapBattles-PartsName.lua'),true))()
+
+local function PlrHasGlove(Name)
+	if game.Players.LocalPlayer and game.Players.LocalPlayer:FindFirstChild("_unlockedGloves") then
+		if game.Players.LocalPlayer._unlockedGloves:FindFirstChild(Name) and game.Players.LocalPlayer._unlockedGloves:FindFirstChild(Name).Value == true then
+			return true
+		end
+	end
+	return false
+end
+
+if not PlrHasGlove("Boxer") then
+		game:GetService("TeleportService"):Teleport(7234087065)
+	return 
+end 
+end)
+
+tab.newButton("Start autofarm", "Press this if you got boxer", function()
+
+if game.Players.LocalPlayer.leaderstats.Glove.Value ~= "Boxer" then
+		fireclickdetector(game:GetService("Workspace").Lobby.Boxer.ClickDetector)
+	end
+
+local RunService = game:GetService("RunService")
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local BoxingEvent = ReplicatedStorage.Events.Boxing
+local LocalPlayer = Players.LocalPlayer
+
+local args = {
+    [1] = LocalPlayer,
+    [2] = false
+}
+
+RunService.Heartbeat:Connect(function()
+    BoxingEvent:FireServer(unpack(args))
+end)
+end)
